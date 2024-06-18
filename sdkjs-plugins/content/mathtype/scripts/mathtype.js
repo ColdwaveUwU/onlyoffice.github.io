@@ -69,8 +69,6 @@
 		let onLoadFunc = function() {
 			if (mathML)
 				genericIntegrationInstance.core.contentManager.setMathML(mathML);
-
-			genericIntegrationInstance.telemeter.wrsOpenedEditorModal(wsTelemetry.toolbar, wsTelemetry.trigger);
 			oEditor = genericIntegrationInstance.core.contentManager.editor;
 			wsTelemetry.startTime = Date.now();
 		};
@@ -87,7 +85,6 @@
 
 		genericIntegrationInstance.init();
 		genericIntegrationInstance.listeners.fire('onTargetReady', {});
-		WirisPlugin.currentInstance = this.wiris_generic;
 
 		if (wsTelemetry.bChemisty) {
 			const A = genericIntegrationInstance.getCore().getCustomEditors();
